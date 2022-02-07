@@ -40,7 +40,7 @@ height: 50px; */
 content: '';
 position: absolute;
 top: -3%;
-left: 10%;
+left: 5%;
 font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 font-weight: 800;
 font-size: 55px;
@@ -168,29 +168,45 @@ justify-content: space-around;
     StartTime.addEventListener('click', Start, {once: true});
     let m = 0;
     let s = 0;
-    Minut.innerHTML = m;
-    Second.innerHTML = s;
+    Second.innerHTML = "0" + s;
+    Minut.innerHTML = "0" + m;
     
     z=0;
   
     
   function Start() {
     if(z==0) { 
+     
+        if(s<10){
 
-         Second.innerHTML = s;
-         Minut.innerHTML = m;
-        
-         s = s+1;
-      
-         setTimeout(Start, 1000);
+         Second.innerHTML = "0" + s;
+                }
+                 
+        s = s+1;
+        setTimeout(Start, 1000);
+         
+       if(s>9)
+       Second.innerHTML = s;
 
-
-         if(s==60)
+         if(s==3) {
 
          return m = m+1, s=0;
+         Second.innerHTML = "0" + s;
+      
+         }
+
+         if(m<10) {
+
+            Minut.innerHTML = "0" + m;
+         }
+
+         if (m>9) {
+
+            Minut.innerHTML = m;
+         }
+       
         
-        
-         if(m==10)
+         if(m==12)
          return z=1;
     
              }

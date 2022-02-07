@@ -24,9 +24,9 @@
 
     <div class="sidebar">
         <div class="btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span class="f-sp"></span>
+            <span class="s-sp"></span>
+            <span class="t-sp"></span>
         </div>
         <ul>
             <li class="menu-title">Menu</li>
@@ -47,12 +47,20 @@
     <script>
         let openBar = document.querySelector('.btn');
         let sideBar = document.querySelector('.sidebar');
+        let span1 = document.querySelector('.f-sp');
+        let span2 = document.querySelector('.s-sp');
+        let span3 = document.querySelector('.t-sp');
+
+        // let btnOff = document.querySelector('.btn');
 
         openBar.addEventListener('click', Open);
 
         function Open() {
 
-            sideBar.classList.toggle('active'); 
+            sideBar.classList.toggle('active');
+            span1.classList.toggle('active'); 
+            span2.classList.toggle('active'); 
+            span3.classList.toggle('active'); 
 
         }
 

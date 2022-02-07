@@ -20,7 +20,7 @@
     -webkit-transition: all 600ms;
     transition: all 600ms;
 
-    /* display: none; */
+    display: none;
 }
 
 .sidebar.active {
@@ -67,6 +67,8 @@ text-decoration: none;
     padding: 10px;
     border-radius: 12px;
     cursor: pointer;
+    width: 32px;
+    height: 30px;
 
 }
 
@@ -82,12 +84,56 @@ text-decoration: none;
 }
 
 .btn span {
+  
 
     display: block;
     width: 25px;
     height: 4px;
     border-color: #666;
     margin: 4px;
+}
+.s-sp.active {
+    display: none;
+    
+    -moz-transition: all 600ms;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+
+}
+.f-sp.active {
+    content: '';
+    position: absolute;
+    
+transform: rotate(45deg);
+top: 37%;
+left: 9%;
+width: 35px;
+
+
+-moz-transition: all 600ms;
+-webkit-transition: all 600ms;
+transition: all 600ms;
+
+
+
+}
+
+.t-sp.active {
+    transform: rotate(-45deg);
+    width: 35px;
+    bottom: 37%;
+    left: 9%;
+
+    content: '';
+    position: absolute;
+
+    
+    -moz-transition: all 600ms;
+    -webkit-transition: all 600ms;
+    transition: all 600ms;
+
+    
+
 }
 
 
